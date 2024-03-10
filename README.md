@@ -1,0 +1,21 @@
+from flask import Flask, jsonify
+import pymysql
+
+app = Flask(__name__)
+@app.route('/')
+def index():
+    return results
+if __name__ == '__main__':
+    app.run(debug=True)
+connection = pymysql.connect(
+    host='localhost',
+    user='root',
+    password='',
+    database='sistema_web_pqr'
+)
+cursor = connection.cursor()
+
+cursor.execute('SELECT*FROM usuario')
+results = cursor.fetchall()
+
+connection.close()
