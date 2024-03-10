@@ -1,3 +1,4 @@
+ESTUDIANTES: DAVID CAMPO PALMA Y ALBERTO MARMOL CAMPO
 from flask import Flask, jsonify
 import pymysql
 
